@@ -15,7 +15,7 @@ RSpec.describe "Auths", type: :request do
         expect(response).to have_http_status(200)
       end
 
-      it "should include a username and JWT" do
+      it "should include a username and JWT" do 
         expect(response.body).to include("jwt")
         expect(response.body).to include("tester")
       end

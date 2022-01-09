@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true
 
   # CUSTOM SCOPE: this gives us the ability to use an email or username to login
-  scope :signin, ->(input) { User.where(username: input).or(User.where(email: input)) }
+  scope :signin, -> (input) { User.where(username: input).or(User.where(email: input)) }
 end

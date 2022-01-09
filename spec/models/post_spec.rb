@@ -1,6 +1,15 @@
 require "rails_helper"
 
 RSpec.describe Post, type: :model do
+  context "associations" do
+    it {should belongs_to(:user).class_name("User")}
+    it {should belongs_to(:category)}
+  end
+
+  # context "validations" do
+  #   it { should validate_presence_of(:comment) }
+  # end
+
   context "factory" do
     before(:all) do
       # build creates an object, an instance of our model category, but doesn't save to database only exists in memory

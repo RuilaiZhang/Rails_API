@@ -35,6 +35,8 @@ group :development, :test do
   gem 'factory_bot_rails' # makes factories in which data is easier to handle
   gem 'database_cleaner' # cleaning up our database between tests, so we don't have stale data inbetween tests which might be a problem
   gem 'rails-controller-testing' # help with controller specifications
+  gem 'shoulda-matchers'
+  gem 'faker'
 end
 
 group :development do

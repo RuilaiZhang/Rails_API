@@ -60,7 +60,7 @@ Content-Type: application/json
 
 {
   "email": "test1@testing.com",
-  "username": "test@user1",
+  "username": "testuser1",
   "password": "test-password2",
   "password_confirmation": "test-password2"
 }
@@ -71,7 +71,7 @@ Content-Type: application/json
 
 {
   "auth": {
-    "signin": "alice@picvic.com.au",
+    "email": "alice@picvic.com.au",
     "password": "Apicvic"
   }
 }
@@ -82,7 +82,7 @@ Content-Type: application/json
 
 {
   "auth": {
-    "signin": "alice",
+    "username": "alice",
     "password": "Apicvic"
   }
 }

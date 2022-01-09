@@ -11,7 +11,7 @@ RSpec.describe Category, type: :model do
       expect(@category).to be_valid
     end
 
-    it "has the right name" do
+    it "has the right name" do 
       expect(@category.name).to eq("community")
     end
   end

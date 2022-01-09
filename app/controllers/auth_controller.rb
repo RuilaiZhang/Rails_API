@@ -1,7 +1,8 @@
 class AuthController < ApplicationController
   # TO LOGIN with a user
   def signin
-    user = User.signin(auth_params[:signin]).first
+    # user = User.find_by(email: auth_params[:email])
+    user = User.signin(auth_params[:signin])
     if user&.authenticate(auth_params[:password])
       token = JwtServices.encode(user)
       # USEFUL for React
@@ -29,7 +30,7 @@ class AuthController < ApplicationController
   private
 
   def auth_params
-    # ALLOWED parameters
+    # ALLOWED parameters 
     params.require(:auth).permit(:auth, :signin, :email, :password, :password_confirmation, :username)
   end
 end
